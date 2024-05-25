@@ -34,7 +34,9 @@
 .m-1 {
     margin: 5px;
 }
-
+.mt-2 {
+    margin-top: 12px;
+}
 .p-1 {
     padding: 10px;
 }

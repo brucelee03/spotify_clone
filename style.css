@@ -13,12 +13,10 @@ body {
 
 .left {
     width: 25vw;
-    padding: 10px;
 }
 
 .right {
     width: 75vw;
-    margin-top: 12px;
 }
 .home div img {
     padding-left: 12px;
@@ -71,21 +69,98 @@ ul li img {
     padding: 0 24px;
     position: absolute;
     bottom: 0;
+    flex-wrap: wrap;
 }
+
 .footer a{
     color: #a7a7a7;
 }
-
+.nav {
+    align-self: center;
+}
+.nav button {
+    border-width: 0;
+    background-color: black;
+    padding: 8px;
+    width: 33px;
+    border-radius: 50px;
+    margin-right: 8px;
+}
 .nav i {
     color: white;
-}
-.nav i:first-child {
-    margin-right: 8px;
 }
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: rgb(34, 34, 34);
 }
 .header > * {
     padding: 20px;
+}
+.button button:first-child {
+    font-size: 16px;
+    background-color: transparent;
+    border-width: 0;
+    color: #a7a7a7;
+    font-weight: bold;
+    padding: 8px 32px 8px 8px;
+}
+.button button:last-child {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border-width: 0;
+    border-radius: 24px;
+    padding: 8px 32px;
+    height: 44px;
+}
+.popular-artists {
+    padding: 18px;
+    font-size: 14px;
+}
+.popular-artists h1 {
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    position: relative;
+    height: 300px;
+    width: 210px;
+    overflow: hidden;
+}
+.artist-img {
+    border-radius: 50%;
+    width: 100%;
+}
+.card h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.card p {
+    font-size: 15px;
+    margin-top: 3px;
+    color: #a7a7a7;
+}
+.play-btn-animation {
+    background-color: transparent;
+    height: 124px;
+    width: 124x;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    top: 110px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(20px);
+}
+
+.card:hover .play-btn-animation {
+opacity: 1;
+transform: translateY(0);
 }
