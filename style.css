@@ -17,6 +17,10 @@ body {
 
 .right {
     width: 75vw;
+    height: 91vh;
+    overflow-y: auto;
+    padding-top: 60px;
+    margin-top: 10px;
 }
 .home div img {
     padding-left: 12px;
@@ -75,29 +79,36 @@ ul li img {
 .footer a{
     color: #a7a7a7;
 }
-.nav {
+.nav-right {
     align-self: center;
 }
-.nav button {
+.nav-left button {
     border-width: 0;
     background-color: black;
     padding: 8px;
     width: 33px;
     border-radius: 50px;
     margin-right: 8px;
+    margin-top: 8px;
 }
-.nav i {
+.nav-left i {
     color: white;
 }
+
 .header {
+
     display: flex;
     justify-content: space-between;
-    background-color: rgb(34, 34, 34);
+    background-color: #0c0b0b;
+    position: fixed;
+    top: 5px;
+    width: 75vw;
+    z-index: 1;
 }
 .header > * {
-    padding: 20px;
+    padding: 12px;
 }
-.button button:first-child {
+.nav-right button:first-child {
     font-size: 16px;
     background-color: transparent;
     border-width: 0;
@@ -105,7 +116,7 @@ ul li img {
     font-weight: bold;
     padding: 8px 32px 8px 8px;
 }
-.button button:last-child {
+.nav-right button:last-child {
     font-size: 16px;
     font-weight: bold;
     background-color: white;
@@ -117,50 +128,150 @@ ul li img {
 .popular-artists {
     padding: 18px;
     font-size: 14px;
+    position: relative;
 }
 .popular-artists h1 {
     font-size: 24px;
     margin-bottom: 9px;
 }
-.card-container {
+.view-btn {
+    border-width: 0;
+    background-color: transparent;
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 33px;
+}
+.artist-container {
     display: flex;
-    justify-content: space-around;
+    gap: 15px;
     flex-wrap: wrap;
 }
-.card {
+.artist {
     position: relative;
-    height: 300px;
+    border-radius: 6px;
+    height: 270px;
     width: 210px;
+    padding: 10px;
     overflow: hidden;
 }
 .artist-img {
     border-radius: 50%;
     width: 100%;
 }
-.card h2 {
+.artist h2 {
     font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
 }
-.card p {
+.artist p {
     font-size: 15px;
     margin-top: 3px;
     color: #a7a7a7;
 }
 .play-btn-animation {
-    background-color: transparent;
-    height: 124px;
-    width: 124x;
+    background-color: #06c714;
+    border-radius: 50%;
+    border-width: 0;
+    height: 50px;
+    width: 50px;
     position: absolute;
-    bottom: 0;
-    right: -20px;
-    top: 110px;
+    top: 160px;
+    right: 18px;
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(20px);
 }
+button svg {
+    margin-top: 5px;
+    margin-left: 3px;
+    height: 24px;
+    width: 24px;
 
-.card:hover .play-btn-animation {
+}
+.artist:hover {
+    background-color: #afafaf0f;
+    transition: background-color 0.3s;
+    box-shadow: inset -4px 4px 17px -1px rgba(0,0,0,0.75);
+}
+.artist:hover .play-btn-animation {
 opacity: 1;
 transform: translateY(0);
+}
+
+.popular-songs {
+    padding: 18px;
+    font-size: 14px;
+    position: relative;
+}
+.popular-songs h1 {
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+.songs-container {
+    display: flex;
+    gap: 19px;
+    flex-wrap: wrap;
+}
+.song-card {
+    position: relative;
+    border-radius: 6px;
+    height: 269px;
+    width: 210px;
+    padding: 10px;
+    overflow: hidden;
+}
+.song-img {
+    width: 100%;
+    border-radius: 8px;
+}
+.song-card:hover {
+    background-color: #afafaf0f;
+    transition: background-color 0.3s;
+    box-shadow: inset -4px 4px 17px -1px rgba(0,0,0,0.75);
+}
+.song-card:hover .play-btn-animation {
+opacity: 1;
+transform: translateY(0);
+}
+.song-card .play-btn-animation {
+    background-color: #06c714;
+    border-radius: 50%;
+    border-width: 0;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 143px;
+    right: 19px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(20px);
+}
+.song-card h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+.song-card p {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #a7a7a7;
+}
+::-webkit-scrollbar {
+    width: 15px; /* width of the scrollbar */
+    height: 10%; /* height of the scrollbar */
+    background-color: transparent; /* background color of the scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* color of the thumb */
+}
+::-webkit-scrollbar:hover {
+    width: 15px;
+    height: 10%; 
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888888;
 }
